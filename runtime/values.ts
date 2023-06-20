@@ -31,6 +31,10 @@ export function makeNumber(n = 0) {
   return { type: "number", value: n } as NumberVal;
 }
 
+export function MakeRandom() {
+  return { type: "number", value: Math.random() } as NumberVal;
+}
+
 export function makeNull() {
   return { type: "null", value: null } as NullVal;
 }
