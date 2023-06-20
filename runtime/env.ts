@@ -5,6 +5,7 @@ export function initGlobalScope(env: Environment) {
   env.declareVar("nil", makeNull(), true);
   env.declareVar("true", makeBool(), true);
   env.declareVar("false", makeBool(false), true);
+  env.declareVar("random", makeRandom(), true)
   
   // Defualt Methods
   env.declareVar("print", makeNative((args, scope) => {console.log(...args); return makeNull()}),true) //visit Natives.ts
